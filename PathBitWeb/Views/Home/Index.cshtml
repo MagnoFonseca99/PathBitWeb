@@ -1,0 +1,369 @@
+﻿@model ClientePathBit.Models.Cliente
+@{
+    //Programação principal
+
+}
+<form asp-controller="Home" asp-action="Index" method="post">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+
+            <h6 class="m-0 font-weight-bold text-primary text-uppercase">Dados Básicos</h6>
+
+        </div>
+
+        @if (TempData["Erro"] != null)
+        {
+            <h6 class="alert alert-danger alert-dismissible fade show" role="alert">
+                Erro: @TempData["Erro"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </h6>
+        }
+
+        @if (TempData["Sucesso"] != null)
+        {
+            <h6 class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["Sucesso"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"> &times;</span>
+                </button>
+            </h6>
+        }
+
+        <div class="card-body">
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Nome" class="col-form-label">Nome</label>
+                        <input id="Nome" asp-for="Nome" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="CPF" class="col-form-label">CPF</label>
+                        <input id="CPF" asp-for="CPF" class="form-control"  placeholder="12345678910" />
+                        <span asp-validation-for="CPF" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Nascimento" class="col-form-label">Nascimento</label>
+                        <input id="Nascimento" asp-for="Nascimento" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Nascimento" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="Telefone" class="col-form-label">Telefone</label>
+                        <input id="Telefone" asp-for="Telefone" placeholder="11912345678" class="form-control" />
+                        <span asp-validation-for="Telefone" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+
+            <h6 class="m-0 font-weight-bold text-primary text-uppercase">Financeiro</h6>
+
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Financeiro.Renda" class="col-form-label">Renda</label>
+                        <input type="number" id="Renda" asp-for="Financeiro.Renda" class="form-control" step="0.01" />
+                        <span asp-validation-for="Financeiro.Renda" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Financeiro.Patrimonio" class="col-form-label">Patrimonio</label>
+                        <input type="number" id="Patrimonio" asp-for="Financeiro.Patrimonio" class="form-control" step="0.01" />
+                        <span asp-validation-for="Financeiro.Patrimonio" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <p id="Mensagem" style="color: red;"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+
+            <h6 class="m-0 font-weight-bold text-primary text-uppercase">Endereço</h6>
+
+        </div>
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Endereco.CEP" class="col-form-label">CEP</label>
+                        <input id="CEP" asp-for="Endereco.CEP" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Endereco.CEP" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div style="margin-top: 38px; margin-left: 0px;">
+                        <button id="BotaoConsultaCEP" type="button" onclick="ConsultaCEP()" class="btn btn-dark btn-icon-split"><span class="icon text-white-50"><i class="fas fa-user-plus"></i></span><span class="text">Consultar CEP</span></button>
+                        <p id="Mensagem1" style="color: red;"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label asp-for="Endereco.Rua" class="col-form-label">Rua</label>
+                        <input id="Rua" asp-for="Endereco.Rua" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Endereco.Rua" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Endereco.Numero" class="col-form-label">Numero</label>
+                        <input id="Numero" asp-for="Endereco.Numero" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Endereco.Numero" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Endereco.Bairro" class="col-form-label">bairro</label>
+                        <input id="Bairro" asp-for="Endereco.Bairro" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Endereco.Bairro" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Endereco.Cidade" class="col-form-label">Cidade</label>
+                        <input id="Cidade" asp-for="Endereco.Cidade" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Endereco.Cidade" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Endereco.Estado" class="col-form-label">Estado</label>
+                        <input id="Estado" asp-for="Endereco.Estado" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Endereco.Estado" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+
+            <h6 class="m-0 font-weight-bold text-primary text-uppercase">Segurança</h6>
+
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Seguranca.Email" class="col-form-label">Email</label>
+                        <input id="Email" asp-for="Seguranca.Email" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Seguranca.Email" class="text-danger"></span>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Seguranca.Senha" class="col-form-label">Senha</label>
+                        <input id="Seguranca.Rua" asp-for="Seguranca.Senha" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Seguranca.Senha" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Seguranca.ConfirmacaoSenha" class="col-form-label">Confirmar Senha</label>
+                        <input id="Seguranca.ConfirmacaoSenha" asp-for="Seguranca.ConfirmacaoSenha" class="form-control" maxlength="200" />
+                        <span asp-validation-for="Seguranca.ConfirmacaoSenha" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div style="margin-top: 5px; margin-left: 0px;">
+                <button type="submit" class="btn btn-success btn-icon-split"><span class="icon text-white-50"><i class="fas fa-save"></i></span><span class="text">Submit</span></button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+@section scripts{
+    <script>
+
+        $(document).ready(function () {
+
+
+            const Renda = $("#Renda");
+            const Patrimonio = $("#Patrimonio");
+            const mensagem = $("#Mensagem");
+
+
+
+            Renda.on("input", validarSoma);
+            Patrimonio.on("input", validarSoma);
+
+
+            function validarSoma() {
+                const valor1 = parseFloat(Renda.val());
+                const valor2 = parseFloat(Patrimonio.val());
+                const soma = valor1 + valor2;
+
+                if (soma >= 1000) {
+                    mensagem.text("");
+                } else {
+                    mensagem.text("Soma de Renda e Patrimonio deve ser maior que 1000").css("color", "red");
+                }
+            }
+        });
+
+        $(document).ready(function () {
+            var campo = $("#CPF");
+            campo.change(function () {
+                if (!validaOnzeDigitosNumericos(campo.val())) {
+                    alert("CPF Inválido");
+                    document.getElementById("CPF").value = "";
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var campo = $("#Telefone");
+            campo.change(function () {
+                if (!validaOnzeDigitosNumericos(campo.val())) {
+                    alert("Telefone Inválido");
+                    document.getElementById("Telefone").value = "";
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            var campo = $("#Nascimento");
+            campo.change(function () {
+                if (validaMenorIdade(campo.val())) {
+                    alert("Apenas maiores de idade permitidos");
+                    document.getElementById("Nascimento").value = "";
+                }
+            });
+        });
+
+        function ConsultaCEP() {
+            if ($("#CEP").val() == '') {
+                alert('Informe o CEP')
+                return;
+            }
+            const mensagem = $("#Mensagem1");
+            mensagem.text("Carregando...").css("color", "black");
+            $('#BotaoConsultaCEP').attr('disabled', 'disabled');
+            $.ajax({
+                url: "/Home/ConsultaCEP",
+                dataType: 'json',
+                method: "get",
+                data: {
+                    "CEP": $("#CEP").val(),
+                },
+                contentType: "application/json",
+                success: function (data) {
+                    $('#BotaoConsultaCEP').removeAttr("disabled");
+                    const obj = JSON.parse(data);
+                    if (obj != "NotFound") {
+                        $("#Rua").val(obj.addressName);
+                        $("#Bairro").val(obj.districtName);
+                        $("#Cidade").val(obj.cityName);
+                        $("#Estado").val(obj.stateName);
+                        mensagem.text("CEP Válido").css("color", "green");
+                    }
+                    else {
+                        mensagem.text("CEP não Encontrado").css("color", "red");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    $('#BotaoConsultaCEP').removeAttr("disabled");
+                    // alert('Erro');
+                    alert(xhr.responseText);
+                    // alert(error);
+                }
+            });
+        }
+
+        function validaOnzeDigitosNumericos(Valor) {
+            // Expressão regular para validar um número de telefone com apenas dígitos
+            const regex = /^\d{11}$/; // Isso permite exatamente 11 dígitos numéricos
+
+            // Testa se o telefone corresponde à expressão regular
+            return regex.test(Valor);
+        }
+
+        function validaMenorIdade(dataNascimento) {
+            var dataNascimentoDate = new Date(dataNascimento);
+            var dataAtual = new Date();
+            var idade = dataAtual.getFullYear() - dataNascimentoDate.getFullYear();
+
+            if (dataAtual.getMonth() < dataNascimentoDate.getMonth() ||
+                (dataAtual.getMonth() === dataNascimentoDate.getMonth() && dataAtual.getDate() < dataNascimentoDate.getDate())) {
+                idade--;
+            }
+
+            if (idade <= 18) {
+                return true; // menor de idade
+            } else {
+                return false; // maior de idade
+            }
+        }
+
+        function validaCPF(s) {
+            console.log(s);
+            var i;
+            var l = '';
+            for (i = 0; i < s.length; i++) if (!isNaN(s.charAt(i))) l += s.charAt(i);
+            s = l;
+            if (s.length != 11) return false;
+            var c = s.substr(0, 9);
+            var dv = s.substr(9, 2);
+            var d1 = 0;
+            for (i = 0; i < 9; i++) d1 += c.charAt(i) * (10 - i);
+            if (d1 == 0) return false;
+            d1 = 11 - (d1 % 11);
+            if (d1 > 9) d1 = 0;
+            if (dv.charAt(0) != d1) return false;
+            d1 *= 2;
+            for (i = 0; i < 9; i++) d1 += c.charAt(i) * (11 - i)
+            d1 = 11 - (d1 % 11);
+            if (d1 > 9) d1 = 0;
+            if (dv.charAt(1) != d1) return false;
+            return true;
+        }
+
+    </script>
+}
+
+

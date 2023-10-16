@@ -1,0 +1,284 @@
+{
+  "clientePJ": {
+    "nomeRazao": "Magno e Gustavo",
+    "cpfCnpj": "4567891234567",
+    "nascimentoFundacao": "2021-09-21",
+    "nacionalidadeId": 1,
+    "selfie": "R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==",
+    "rgCnh": "R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==",
+    "comprovanteEndereco": "R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw==",
+    "atividadePrincipalId": 3,
+    "tipoCapitalId": 1,
+    "formaConstituicaoId": 1,
+    "listadoBolsa": false,
+    "nomeFantasia": "MG",
+    "contratoSocial": "",
+    "eleicaoConselhoAdministracao": "",
+    "eleicaoDiretoria": "",
+    "balanco": ""
+  },
+  "email": [
+    {
+      "descricaoEmail": "gguimaraes@haitongib.com.br",
+      "emailPrincipal": true
+    }
+  ],
+  "endereco": [
+    {
+      "tipoLogradouroId": 65,
+      "paisId": 1,
+      "tipoEnderecoId": 5,
+      "lagradouro": "Brigadeiro Faria Lima",
+      "numero": "3729",
+      "complemento": "",
+      "bairro": "Itaim Bibi",
+      "municipio": "Sao Paulo",
+      "cep": "7894655",
+      "uf": "SP",
+      "enderecoPrincipal": true,
+      "enderecoCorrespondencia": false,
+      "responsavelContato": null,
+      "telefoneresponsavelContato": null,
+      "emailResponsavelContato": null
+    },
+    {
+      "tipoLogradouroId": 65,
+      "paisId": 1,
+      "tipoEnderecoId": 5,
+      "lagradouro": "Juscelino",
+      "numero": "5000",
+      "complemento": "",
+      "bairro": "Itaim Bibi",
+      "municipio": "Sao Paulo",
+      "cep": "88888888",
+      "uf": "SP",
+      "enderecoPrincipal": false,
+      "enderecoCorrespondencia": true,
+      "responsavelContato": "Gustavo",
+      "telefoneresponsavelContato": "54698465884",
+      "emailResponsavelContato": "gguimaraes@haitongib.com.br"
+    }
+  ],
+  "telefone": [
+    {
+      "tipoTelefoneId": 3,
+      "prefixo": "+5511",
+      "numero": "999999999",
+      "ramal": null
+    }
+  ],
+  "administrador": [
+    {
+      "nome": "Gustavo",
+      "cpf": "78987987987"
+    },
+    {
+      "nome": "Magno",
+      "cpf": "78978987987"
+    }
+  ],
+  "representante": [
+    {
+      "nacionalidadePrincipalId": 1,
+      "outraNacionalidadeId": null,
+      "paisId": 1,
+      "nome": "Gustavo",
+      "cpf": "78987987987",
+      "dataNascimento": "1978-09-21",
+      "email": "gguimaraes@haitongib.com.br",
+      "CidadaniaAmericana": true,
+      "domicilioFiscalExtrangeiro": true,
+      "autoCertificacao": [
+        {
+          "numeroIdentificacaoExterior": "555555555",
+          "paisDomicilioFiscalId": 2,
+          "identificacaoFiscal": "55555555585",
+          "justificativaAusenciaTIN": null
+        }
+      ],
+      "ppe": true,
+      "formularioPPE": [
+        {
+          "oProprio": true,
+          "cargoFuncao": "Deputado federal",
+          "inicio": "2000-09-21",
+          "termino": "2000-09-21",
+          "nomeDoPEP": "Gustavo",
+          "relacionamento": null
+        }
+      ],
+      "telefonePrefixo": "+5511",
+      "telefoneNumero": "115555555",
+      "telefoneRamal": null
+    }
+  ],
+  "acionista": [
+    {
+      "paisConstituicaoId": 1,
+      "nomeRazao": "Magno",
+      "cpfCnpj": "9999999999",
+      "totalCotas": 50,
+      "CidadaniaAmericana": true,
+      "domicilioFiscalExtrangeiro": true,
+      "autoCertificacao": [
+        {
+          "numeroIdentificacaoExterior": "654654654",
+          "paisDomicilioFiscalId": 2,
+          "identificacaoFiscal": "789456123",
+          "justificativaAusenciaTIN": null
+        }
+      ],
+      "ppe": true,
+      "formularioPPE": [
+        {
+          "oProprio": true,
+          "cargoFuncao": "Presidente",
+          "inicio": "2019-09-21",
+          "termino": "2019-09-21",
+          "nomeDoPEP": "Magno",
+          "relacionamento": null
+        }
+      ]
+    }
+  ],
+  "situacaoFinanceira": {
+    "dataSFP": "2023-09-21",
+    "patrimonioLiquido": 1000000,
+    "faturamentoMedioAno": 83334
+  },
+  "suitability": {
+    "rendasRegulares": 83334,
+    "patrimonio": 10000000,
+    "respostaId": [
+      1,
+      5,
+      10,
+      11,
+      17,
+      19,
+      24,
+      29,
+      33,
+      37,
+      40
+    ],
+    "pontos": 45
+  },
+  "respostasResponsabilidade": [
+    {
+      "respostaresponsabilidadeId": 187,
+      "descricaoJustificativa": "exemplo de descricao",
+      "respostaClienteComplementar": [
+        {
+          "respostaComplementarId": 99
+        }
+      ]
+    },
+    {
+      "respostaresponsabilidadeId": 189,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 191,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 193,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 195,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": null,
+      "descricaoJustificativa": null,
+      "respostaClienteComplementar": [
+        {
+          "respostaComplementarId": 140,
+          "dataInicio": "2022-01-01",
+          "dataFim": "2022-01-01"
+        }
+      ]
+    },
+    {
+      "respostaresponsabilidadeId": 197,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 199,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 201,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 203,
+      "descricaoJustificativa": "exemplo de descricao",
+      "respostaClienteComplementar": [
+        {
+          "respostaComplementarId": 113
+        }
+      ]
+    },
+    {
+      "respostaresponsabilidadeId": 205,
+      "descricaoJustificativa": "exemplo de descricao",
+      "respostaClienteComplementar": [
+        {
+          "respostaComplementarId": 116
+        }
+      ]
+    },
+    {
+      "respostaresponsabilidadeId": 207,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 209,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 211,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 213,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 215,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 217,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 219,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 221,
+      "descricaoJustificativa": "exemplo de descricao",
+      "respostaClienteComplementar": [
+        {
+          "respostaComplementarId": 150
+        },
+        {
+          "respostaComplementarId": 152
+        }
+      ]
+    },
+    {
+      "respostaresponsabilidadeId": 223,
+      "descricaoJustificativa": "exemplo de descricao"
+    },
+    {
+      "respostaresponsabilidadeId": 225,
+      "descricaoJustificativa": "exemplo de descricao"
+    }
+
+  ]
+}
